@@ -1,5 +1,5 @@
-.footer {
-    margin-top: 1vh;
+.footer { 
+    margin-top: auto;
     background-color: #3A4895;
     color: white;
     display: flex;
@@ -8,4 +8,9 @@
     height: 50px;
     font-size: 12px;
     padding: 0 25px 0 25px;
+}
+
+.contact-us-link  {
+    text-decoration: none;
+    color: inherit;
 }

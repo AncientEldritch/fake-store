@@ -1,0 +1,27 @@
+.details-page-container {
+    width: 50%;
+    margin: 10% auto 10% auto;
+    background-color: white;
+    padding: 10%;
+    align-items: center;
+    display: flex;
+}
+
+.item-details-image {
+    width: 25%;
+    margin-right: 64px;
+}
+
+.cart-button {
+    background-color: #FFD814;
+    border: none;
+    width: 150px;
+    height: 36px;
+}
+
+.item-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-left: 64px;
+}

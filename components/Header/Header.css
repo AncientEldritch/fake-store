@@ -8,3 +8,7 @@ header {
     margin: 25px;
 }
 
+.homepage-link {
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Categories.css'
 
-function Categories({category}) {
+
+
+function Categories({category, handleCategoryClick}) {
   return (
-    <button className="category">{category}</button>
+    <button onClick={() => handleCategoryClick(category)} className="category">{category}</button>
   )
 }
 
