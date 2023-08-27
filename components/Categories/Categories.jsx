@@ -3,7 +3,7 @@ import './Categories.css'
 
 function Categories({category}) {
   return (
-    <button>{category}</button>
+    <button className="category">{category}</button>
   )
 }
 
