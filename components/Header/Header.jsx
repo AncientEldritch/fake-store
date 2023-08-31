@@ -9,8 +9,8 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <header>
-      <Link className="homepage-link" to='/homepage'>Fake Store</Link>
-      <AiOutlineShoppingCart className="cart-icon" />
+      <Link className="homepage-link" to='/'>Fake Store</Link>
+      <Link to='/cart'><AiOutlineShoppingCart className="cart-icon" /></Link>
     </header>
   )
 }

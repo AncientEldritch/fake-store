@@ -9,15 +9,7 @@ import { FavoritesContext } from '../../src/contexts/FavoritesContext';
 function ItemCard({product}) {
 
 const {addProduct, favorites, removeProduct} = useContext(FavoritesContext)
-const [isFavorite, setIsFavorite] = React.useState(false)
 
-//useEffect(
-  //() => {
-    console.log(favorites)
-    //is this product in favorites?
-    //setIsFavorite(favorites?.find(item => item.id === character.id))
-  //}, [favorites]
-//)
 
 
   return (
@@ -35,10 +27,10 @@ const [isFavorite, setIsFavorite] = React.useState(false)
         )}
         <p className="item-type">{product.category}</p>
         <p className="item-price">{product.price}€</p>
-        {isFavorite ? (
-          <FaHeart className="heart-icon blue-heart" />
+        {favorites.includes(product.id) ? (
+          <FaHeart onClick={() => removeProduct(product.id)} className="heart-icon blue-heart" />
         ) : (
-          <FaHeart className="heart-icon" />
+          <FaHeart onClick={()=>addProduct(product.id)}  className="heart-icon" />
         )}
       </div>
     </div>

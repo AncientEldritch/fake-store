@@ -12,8 +12,8 @@ export default function FavoritesContextProvider(props){
         ()=>{
             //get the value from local storage
             const storedFavorites  =  localStorage.getItem('favoritesList')
-            console.log(storedFavorites)
-            //check if something was there
+            //console.log(storedFavorites)
+            
             if (storedFavorites) {
                 //use this value for state
                 setFavorites(JSON.parse(storedFavorites))
@@ -28,23 +28,22 @@ export default function FavoritesContextProvider(props){
         }, [favorites]
     )
 
-    const addProduct = (productToAdd) => {
-        console.log('adding', productToAdd)
-        // I need to add this obejct to favorites state
-        //create new array with all the old stuff and the new object
-        let newFavorites  = [...favorites, productToAdd]
-        //update my state to this
-        setFavorites(newFavorites)
-    }
+    
+
+    const addProduct = (productId) => {
+        if (!favorites.includes(productId)) {
+          console.log('adding', productId);
+          setFavorites([...favorites, productId]);
+        }
+      };
 
     //need function to remove a character
     const removeProduct = (productId) => {
-        console.log("removing", productId)
-        //keep all that are not this id
-        let newFavorites =  favorites.filter(item=>item.id != productId)
-        //update state to this
-        setFavorites(newFavorites)
-
+        console.log("removing", productId);
+        // Keep all that are not this id
+        let newFavorites =  favorites.filter(id => id !== productId);
+        // Update state to this
+        setFavorites(newFavorites);
     }
 
     return(

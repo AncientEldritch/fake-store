@@ -1,10 +1,13 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useContext} from 'react'
 import "./ItemDetails.css"
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import { CartContext } from '../../src/contexts/CartContext'
 
 
 function ItemDetails() {
+
+  const {addToCart, inCart, removeFromCart}  = useContext(CartContext)
     //This page shows details for each item when the page loads (useEffect)
     //urlparam via item id
     //extract id with useParams
@@ -18,7 +21,7 @@ function ItemDetails() {
         console.log(itemId)
         axios.get(`https://fakestoreapi.com/products/${itemId}`)
         .then(res =>  {
-          console.log(res.data)
+          //console.log(res.data)
           setItem(res.data)
         })
         .catch(err  => console.log(err))
@@ -32,7 +35,7 @@ function ItemDetails() {
         <p style={{fontSize: '20px', fontWeight: 'bold'}}>{item.price}€</p>
         <p style={{fontSize: '20px', fontWeight: 'bold'}}>Description</p>
         <p className="item-details-description">{item.description}</p>
-        <button className="cart-button">Add to Cart</button>
+        <button className="cart-button" onClick={()=>addToCart(item)}>Add to Cart</button>
       </div>
     </div>
   )
