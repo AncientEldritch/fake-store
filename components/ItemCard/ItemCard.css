@@ -12,8 +12,10 @@
 }
 
 .item-image {
-    width: 75%;
+    display: block;
+    max-width: 80%;
     border: solid 1px #EFEFEF;
+    border-radius: 10%;
     padding: 10px 25px 10px 25px;
     max-height: 50%;
 }
@@ -44,7 +46,7 @@
 
 .heart-icon {
     position: absolute;
-    bottom: 85%;
+    bottom: 90%;
     left: 82%;
     padding: 5px;
     background-color: rgb(233, 231, 231);
@@ -56,4 +58,10 @@
 
 .blue-heart {
     color: darkblue;
+}
+
+@media (max-width:480px)  {
+ .item-card {
+    width: 100px;
+    }
 }

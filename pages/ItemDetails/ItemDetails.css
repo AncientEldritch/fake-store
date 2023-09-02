@@ -17,6 +17,7 @@
     border: none;
     width: 150px;
     height: 36px;
+    font-weight: bold;
 }
 
 .item-details-container {
@@ -24,4 +25,28 @@
     flex-direction: column;
     gap: 24px;
     margin-left: 64px;
+}
+
+@media (max-width:767px)  {
+   .details-page-container {
+        flex-direction: column;
+    }
+
+    .item-details-image {
+        max-height: 80%;
+        width: 75%;
+        margin-right: 0%;
+        margin-bottom: 5%;
+    }
+
+}
+
+@media (max-width: 480px) {
+     .item-details-container {
+        margin-left: 0;
+     }
+     .cart-button {
+        margin-left: auto;
+        margin-right: auto;
+     }
 }

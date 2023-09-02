@@ -27,10 +27,10 @@ const {addProduct, favorites, removeProduct} = useContext(FavoritesContext)
         )}
         <p className="item-type">{product.category}</p>
         <p className="item-price">{product.price}€</p>
-        {favorites.includes(product.id) ? (
-          <FaHeart onClick={() => removeProduct(product.id)} className="heart-icon blue-heart" />
+        {favorites.includes(product) ? (
+          <FaHeart onClick={() => removeProduct(product)} className="heart-icon blue-heart" />
         ) : (
-          <FaHeart onClick={()=>addProduct(product.id)}  className="heart-icon" />
+          <FaHeart onClick={()=>addProduct(product)}  className="heart-icon" />
         )}
       </div>
     </div>

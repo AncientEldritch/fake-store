@@ -8,7 +8,7 @@ import ContactUs from '../pages/ContactUs/ContactUs'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import  FavoritesContextProvider from "./contexts/FavoritesContext"
 import Cart from '../pages/Cart/Cart'
-import CartContextProvider from './contexts/CartContext'
+
 
 
 
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <CartContextProvider>
+      
       <FavoritesContextProvider>
        <Header />
        <Routes>
@@ -28,7 +28,7 @@ function App() {
        </Routes>
        <Footer />
       </FavoritesContextProvider>
-      </CartContextProvider>
+     
     </BrowserRouter>
   )
 }

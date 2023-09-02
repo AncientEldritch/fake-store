@@ -12,3 +12,25 @@ header {
     text-decoration: none;
     color: inherit;
 }
+
+.cart-icon-container {
+    position: relative;
+}
+
+.cart-num {
+    position: absolute;
+    font-size: 10px;
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+    width: 10px;
+    text-align: center;
+    right: 25%;
+    bottom: 65%;
+}
+
+@media (max-width: 480px) {
+    header {
+        margin: 10px;
+    }
+}

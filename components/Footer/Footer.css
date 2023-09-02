@@ -8,9 +8,26 @@
     height: 50px;
     font-size: 12px;
     padding: 0 25px 0 25px;
+    position: relative;
 }
 
 .contact-us-link  {
     text-decoration: none;
     color: inherit;
+}
+
+@media (max-width: 480px) {
+    .footer {
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .contact-us-link {
+        position: absolute;
+        bottom: 50%;
+    }
+
+    .made-by {
+        margin-bottom: 2%;
+    }
 }

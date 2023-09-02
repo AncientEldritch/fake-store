@@ -48,3 +48,17 @@
 ::placeholder {
     color: white;
 }
+
+@media (max-width:767px)  {
+    .contact-us-form {
+        width: 75%;
+        margin-top: 10%;
+    }
+}
+
+@media (max-width:480px)  {
+    .contact-us-form {
+        width: 75%;
+        margin-top: 10%;
+    }
+}

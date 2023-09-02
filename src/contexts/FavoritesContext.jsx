@@ -30,24 +30,31 @@ export default function FavoritesContextProvider(props){
 
     
 
-    const addProduct = (productId) => {
-        if (!favorites.includes(productId)) {
-          console.log('adding', productId);
-          setFavorites([...favorites, productId]);
+    const addProduct = (product) => {
+        if (!favorites.includes(product)) {
+          console.log('adding', product);
+          setFavorites([...favorites, product]);
         }
       };
 
     //need function to remove a character
-    const removeProduct = (productId) => {
-        console.log("removing", productId);
+    const removeProduct = (product) => {
+        console.log("removing", product);
         // Keep all that are not this id
-        let newFavorites =  favorites.filter(id => id !== productId);
+        let newFavorites =  favorites.filter(id => id !== product);
         // Update state to this
         setFavorites(newFavorites);
     }
 
+    //Need function to remove all items
+
+    const clearFavorites = () => {
+        favorites.splice(0,favorites.length)
+        setFavorites([...favorites]);
+      }
+
     return(
-        <FavoritesContext.Provider value={{addProduct, favorites, removeProduct}}>
+        <FavoritesContext.Provider value={{addProduct, favorites, removeProduct, clearFavorites}}>
             {props.children}
         </FavoritesContext.Provider>
     )

@@ -52,5 +52,11 @@ table {
 body {
 	background-color: #F9F9F9;
 	font-family: Inter;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+
 }
+
+
 

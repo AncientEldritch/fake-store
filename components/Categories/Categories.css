@@ -6,3 +6,17 @@
    margin-top: 24px;
    color: #5264C3
 }
+
+@media (max-width:767px)  {
+   .category {
+       font-size: 22px;
+   }
+
+}
+
+@media (max-width: 480px) {
+
+   .category {
+      font-size: 18px;
+   }
+}
